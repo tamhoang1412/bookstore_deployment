@@ -1,0 +1,38 @@
+<?php
+// News Data Helper
+class Magentostudy_News_Helper_Data extends Mage_Core_Helper_Data{
+	// Path to store config if fronend output is enabled
+	const XML_PATH_ENABLED = 'news/view/enabled';
+
+	// path to store config where count of news posts per page is stored
+	conST XML_PATH_ITEM_PER_PAGE = 'news/view/items_per_page';
+
+	// Path to store config where count of days while news is still recently added is stored
+	const XML_PATH_DAYS_DIFFERENCE = 'news/view/days_difference';
+
+	// News Item instance for lazy loading
+	protected $_newsItemInstance;
+	// Checks whether news can be displayed in the frontend
+	public function isEnabled($store = null){
+		return Mage::getStoreConfigFlag(self::XML_PATH_ENABLED, $store);
+	}
+
+	// Return the number of items per page
+	public function getNewsPerPage($store = null){
+		return abs((int)Mage::getStoreConfig(self::XML_PATH_ITEMS_PER_PAGE,$store));
+	}
+
+	// return difference in days while news is recently added
+	public function getDaysDifference($store = null){
+		return abs((int)Mage::getStoreConfig(self::XML_PATH_DAYS_DIFFERENCE,$store));
+	}
+
+	// return current news item instance from the Registry
+	// return Magentostudy_News_Model_News
+	public function getNewsItemInstance(){
+		if(!$this->_newsItemInstance){
+			Mage::throwException($this->__("News item instance does not exist in Registry"));
+		}
+		return $this->_newsItemInstancce;
+	}
+}

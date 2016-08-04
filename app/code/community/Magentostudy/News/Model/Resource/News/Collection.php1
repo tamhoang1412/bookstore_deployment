@@ -1,0 +1,14 @@
+<?php
+class Magentostudy_News_Model_Resource_News_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract{
+	protected function __construct(){
+		$this->_init("magentostudy_news/news");
+	}
+
+	// Chuẩn bị cho việc hiển thị trong danh sách
+	// trả về một đối tượng Magentostudy_News_Model_Resource_News_Collection
+	public function prepareForList($page){
+		$this->setPageSize(Mage::helper("magentostudy_news")->getNewsPerPage());
+		$this->setCurPage($page)->setOrder('published_at',Varien_Data_Collection::SORT_ORDER_DESC);
+		return $this;
+	}
+}
