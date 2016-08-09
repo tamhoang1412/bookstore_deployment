@@ -1,0 +1,12 @@
+a:5:{i:0;s:26:"Customer email is required";i:1;s:1528:"#0 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Customer\Model\Resource\Customer.php(76): Mage::exception('Mage_Customer', 'Customer email ...')
+#1 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Eav\Model\Entity\Abstract.php(1122): Mage_Customer_Model_Resource_Customer->_beforeSave(Object(Mage_Customer_Model_Customer))
+#2 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\Abstract.php(318): Mage_Eav_Model_Entity_Abstract->save(Object(Mage_Customer_Model_Customer))
+#3 D:\XAMPP\htdocs\bookstore\app\code\local\Magestore\Fblogin\controllers\IndexController.php(79): Mage_Core_Model_Abstract->save()
+#4 D:\XAMPP\htdocs\bookstore\app\code\local\Magestore\Fblogin\controllers\IndexController.php(30): Magestore_Fblogin_IndexController->createCustomerMultiWebsite(Array, '1', '1')
+#5 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Magestore_Fblogin_IndexController->indexAction()
+#6 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#7 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#8 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#9 D:\XAMPP\htdocs\bookstore\app\Mage.php(692): Mage_Core_Model_App->run(Array)
+#10 D:\XAMPP\htdocs\bookstore\index.php(83): Mage::run('', 'store')
+#11 {main}";s:3:"url";s:183:"/bookstore/index.php/fblogin/index/index/auth/1/?error=access_denied&error_code=200&error_description=Permissions+error&error_reason=user_denied&state=9a8359c8bbc9c850b84799f967c79889";s:11:"script_name";s:20:"/bookstore/index.php";s:4:"skin";s:2:"vi";}

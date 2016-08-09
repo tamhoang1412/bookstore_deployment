@@ -1,0 +1,17 @@
+a:5:{i:0;s:801:"Error in file: "D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Paypal\sql\paypal_setup\install-1.6.0.0.php" - SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'paypal_settlement_report' already exists, query was: CREATE TABLE `paypal_settlement_report` (
+  `report_id` int UNSIGNED NOT NULL auto_increment COMMENT 'Report Id' ,
+  `report_date` timestamp NULL default NULL COMMENT 'Report Date' ,
+  `account_id` varchar(64) NULL COMMENT 'Account Id' ,
+  `filename` varchar(24) NULL COMMENT 'Filename' ,
+  `last_modified` timestamp NULL default NULL COMMENT 'Last Modified' ,
+  PRIMARY KEY (`report_id`),
+  UNIQUE `UNQ_PAYPAL_SETTLEMENT_REPORT_REPORT_DATE_ACCOUNT_ID` (`report_date`, `account_id`)
+) COMMENT='Paypal Settlement Report Table' ENGINE=INNODB charset=utf8 COLLATE=utf8_general_ci";i:1;s:960:"#0 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\Resource\Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '1.6.0.6')
+#2 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.6.0.6')
+#3 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 D:\XAMPP\htdocs\bookstore\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 D:\XAMPP\htdocs\bookstore\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 D:\XAMPP\htdocs\bookstore\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:11:"/bookstore/";s:11:"script_name";s:20:"/bookstore/index.php";s:4:"skin";s:7:"default";}
